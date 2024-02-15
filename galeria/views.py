@@ -20,3 +20,12 @@ def buscar(request):
             fotografias = fotografias.filter(nome__icontains= nome_a_buscar)
 
     return render(request, "galeria/buscar.html", {"cards": fotografias})
+
+def tag(request, foto_categoria):
+    
+    if foto_categoria == 'galaxia':
+        foto_categoria = 'gal'
+
+    fotografias = Fotografia.objects.filter(categoria__icontains = foto_categoria, publicada=True)
+
+    return render(request, "galeria/tag.html", {"cards": fotografias})

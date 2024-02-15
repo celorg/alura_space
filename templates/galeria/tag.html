@@ -10,18 +10,10 @@
                 <section class="tags">
                     <p class="tags__titulo">Busque por tags:</p>
                     <ul class="tags__lista">
-                        <a href="{% url 'tag' 'nebulosa' %}" class="link_tag" >
-                            <li class="tags__tag">Nebulosa</li>
-                        </a>
-                        <a href="{% url 'tag' 'estrela' %}">
-                            <li class="tags__tag">Estrela</li>
-                        </a>
-                        <a href="{% url 'tag' 'galaxia' %}">
-                            <li class="tags__tag">Galáxia</li>
-                        </a>
-                        <a href="{% url 'tag' 'planeta' %}">
-                            <li class="tags__tag">Planeta</li>
-                        </a>
+                        <li class="tags__tag">Nebulosa</li>
+                        <li class="tags__tag">Estrela</li>
+                        <li class="tags__tag">Galáxia</li>
+                        <li class="tags__tag">Planeta</li>
                     </ul>
                 </section>
                 <section class="galeria">
@@ -56,9 +48,9 @@
                             {% else %}
                                 <div class="imagem__texto">
                                     <p>
-                                        Ainda não há nenhuma fotografia publicada...
+                                        Fotografias não encontradas
                                     </p>
-                                </div>
+                                </div> 
                             {% endif %}
                         </ul>
                         

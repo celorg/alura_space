@@ -23,6 +23,7 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -38,6 +39,7 @@ body {
     background-position: center;
     background-size: cover;
 }
+
 ol, ul {
     list-style: none;
 }
@@ -358,10 +360,16 @@ table {
     align-items: center;
     color: #D9D9D9;
     font-size: 1.3rem;
+    
 }
 
 .tags__titulo {
     margin-right: 4rem;
+    text-decoration: none;
+}
+
+.link_tag{
+    text-decoration: none;
 }
 
 .tags__lista {
@@ -376,6 +384,7 @@ table {
     width: 100px;
     text-align: center;
     border: 2px solid transparent;
+    text-decoration: none;
 }
 
 .tags__tag:hover {
