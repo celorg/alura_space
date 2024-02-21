@@ -1,5 +1,6 @@
 from datetime import datetime
 from django.db import models
+from django.contrib.auth.models import User
 import os
 
 def get_upload_path(instance, filename):
@@ -25,6 +26,13 @@ class Fotografia(models.Model):
     foto = models.ImageField(upload_to=get_upload_path, blank=True)
     publicada = models.BooleanField( default= False )
     data_fotografia = models.DateTimeField(default=datetime.now, blank=False)
+    usuario = models.ForeignKey(
+        to=User,
+        on_delete= models.SET_NULL,
+        null= True,
+        blank=False,
+        related_name="user",
+    )
 
     def __str__(self):
         return self.nome
